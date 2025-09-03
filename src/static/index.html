@@ -12,6 +12,7 @@
       <h2>Extracurricular Activities</h2>
     </header>
 
+
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
@@ -20,26 +21,23 @@
           <p>Loading activities...</p>
         </div>
       </section>
-
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div id="message" class="hidden"></div>
-      </section>
+      <div id="message" class="hidden"></div>
     </main>
+
+    <!-- Modal for registration -->
+    <div id="register-modal" class="hidden">
+      <div class="modal-content">
+        <span id="close-modal" class="close-btn">&times;</span>
+        <h3>Register for <span id="modal-activity-name"></span></h3>
+        <form id="modal-signup-form">
+          <div class="form-group">
+            <label for="modal-email">Student Email:</label>
+            <input type="email" id="modal-email" required placeholder="your-email@mergington.edu" />
+          </div>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2023 Mergington High School</p>
